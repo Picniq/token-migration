@@ -22,7 +22,7 @@ async function main() {
   const qfipool = StakePool.attach('0x88f11399FA461285D857Bb6BEEae56cC58dcbdf0');
   const wbtcpool = StakePool.attach('0x725F7F1AeBA0c542be98a32611827D3372be1198');
 
-  const fileContent = await fs.readFile(__dirname+'/stakeraddresses.csv');
+  const fileContent = await fs.readFile(__dirname+'/qfipool.csv');
   parse(fileContent, {columns: false}, async (err: any, records: any): Promise<void> => {
       const lines = records.toString().split(',');
       const items = await lines.reduce(async (prev: any[], curr: string) => {
