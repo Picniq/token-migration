@@ -27,3 +27,15 @@ yarn exec hardhat run scripts/stakers.ts
 ```
 
 It is probably smart to rename either the existing stakers.csv and wbtcstakers.csv files or the new one you create so you can confirm they are both the same. Note the script removes 0 value stakers as the export from Etherscan contained all addresses that interacted with the pool.
+
+## Create final migration data
+
+NPM
+```bash
+npx hardhat run scripts/master.ts
+```
+
+Yarn
+```bash
+yarn exec hardhat run scripts/master.ts
+```
